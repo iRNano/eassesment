@@ -1,0 +1,74 @@
+````markdown
+# Eassessment
+
+The Eassessment contains the Card component, which is a reusable React component used within the application to display user information.
+
+## Features
+
+- Fetches user data from an API endpoint.
+- Renders user name and email address in a card format.
+- Provides a refresh button to fetch new data.
+- Responsive design with a mobile breakpoint.
+
+## Usage
+
+Import the Card component and use it within your application components:
+
+```tsx
+import React from "react";
+import Card from "./components/Card";
+
+const UserDetailPage: React.FC = () => {
+  return (
+    <div>
+      <h1>User Details</h1>
+      <Card />
+    </div>
+  );
+};
+
+export default UserDetailPage;
+```
+````
+
+The Card component can be customized using styled-components and supports responsive design with a mobile breakpoint.
+
+## Development
+
+To set up a development environment and run the Eassessment application locally, follow these steps:
+
+1. Clone the repository:
+
+```shell
+git clone https://github.com/irnano/eassessment.git
+```
+
+2. Navigate to the project directory:
+
+```shell
+cd eassessment
+```
+
+3. Install dependencies:
+
+```shell
+npm install
+```
+
+4. Start the development server:
+
+```shell
+npm run dev
+```
+
+The Eassessment application will be available at `http://localhost:5173` by default.
+
+## Testing
+
+To run the tests for the Card component, use the following command:
+
+```shell
+npm run test
+```
+
+The tests are implemented using Vitest and React Testing Library that covers rendering, fetching data, and error handling scenarios.
