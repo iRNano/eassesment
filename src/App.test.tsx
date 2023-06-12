@@ -66,19 +66,13 @@ describe('Card component', () => {
     // Mock axios.get implementation to throw an error
     const errorMessage = 'Failed to fetch user data';
     const spy = vi.spyOn(console,'log')
-    // const mockedAxios = axios as vi.Mocked<typeof axios>;
-    // vi.mocked(axios,true).get.mockRejectedValueOnce(new Error(errorMessage));
-    // vi.fn().mockRejectedValueOnce(new Error(errorMessage));
-    // console.log(spy)
+    
     console.log(errorMessage);
     render(<Card />);
 
-    // Verify that the error message is logged
-    // await rejectCall();
-    await expect(spy).toHaveBeenCalledWith(errorMessage);
-    // await expect(spy).toHaveBeenCalledWith('Error fetching user data:', Error(errorMessage));
-    // await waitFor(() => {
-      
-    // });
+    await waitFor(() => {
+        expect(spy).toHaveBeenCalledWith(errorMessage);
+    })
+    
   });
 });
