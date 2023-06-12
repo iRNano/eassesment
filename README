@@ -61,7 +61,7 @@ npm install
 npm run dev
 ```
 
-The Eassessment application will be available at `http://localhost:5173` by default.
+The Eassessment application will be available at `http://localhost:5174` by default.
 
 ## Testing
 
